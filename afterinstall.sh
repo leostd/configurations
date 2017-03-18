@@ -18,8 +18,10 @@ sudo apt-get install git -y
 sudo apt-get install build-essential libssl-dev -y
 sudo apt-get install curl -y
 sudo apt-get install caffeine -y
-
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
 bash install_nvm.sh
 source ~/.profile
 nvm install 6.10.0
