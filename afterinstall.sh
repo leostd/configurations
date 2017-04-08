@@ -2,6 +2,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB31
 
 sudo add-apt-repository ppa:noobslab/macbuntu
 sudo add-apt-repository ppa:videolan/master-daily
+sudo add-apt-repository ppa:nathan-renniewaldock/flux
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 sudo apt-get update
@@ -15,9 +16,11 @@ sudo apt-get install gnome-tweak-tool -y
 sudo apt-get install spotify-client
 sudo apt install vlc -y
 sudo apt-get install git -y
-sudo apt-get install build-essential libssl-dev 
-
+sudo apt-get install build-essential libssl-dev -y
+sudo apt-get install fluxgui
+sudo apt-get install curl -y
 curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh -o install_nvm.sh
 bash install_nvm.sh
 source ~/.profile
 nvm install 6.0.0
+
